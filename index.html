@@ -17,17 +17,22 @@
                     <h1>Captain's Text Encrypter</h1>
                 </div>
 
-                <div>
+                <div class="input-container">
                     <input type="text" id="encryptedText" placeholder="Type a message to encrypt">
                 </div>
 
                 <div class="encrypter-container">
 
-                    <textarea name="result" id="decryptedText" cols="20" rows="10"></textarea>
-                    <button type="button" id="encryptionButton">Encrypt</button>
-                    <button type="button" id="decryptionButton">Decrypt</button>
-                    <button type="button" id="copy">Copy to clipboard</button>
-            
+                    <div class="text-result">
+                        <textarea name="result" id="decryptedText" cols="20" rows="10"></textarea>
+                    </div>
+
+                    <div class="button-container">
+                        <button type="button" id="encryptionButton">Encrypt</button>
+                        <button type="button" id="decryptionButton">Decrypt</button>
+                        <button type="button" id="copy">Copy to clipboard</button>
+                    </div>
+
                 </div>
                 
             </form>    

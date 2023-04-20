@@ -1,3 +1,4 @@
+
 *{
     box-sizing: border-box;
     
@@ -6,4 +7,64 @@
 body{
     margin: 0 auto;
     padding: 0 auto;
+    display: flex;
+    justify-content: center;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form{
+    margin: 0 auto;
+    padding: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-title{
+    margin: 0 auto;
+    padding: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.input-container{
+    margin: 0 auto;
+    padding: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1em;
+}
+
+.encrypter-container{
+    margin: 0 auto;
+    padding: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 1em;
+}
+
+.text-result{
+    margin: 0 auto;
+    padding: 0 auto;
+    display: row;
+    flex: column;
+    justify-content: center;
+    padding-bottom: 1em;
+}
+
+.button-container{
+    margin: 0 auto;
+    padding: 0 auto;
+    display: row;
+    flex: column;
+    justify-content: center;
+    padding-bottom: 1em;
 }
