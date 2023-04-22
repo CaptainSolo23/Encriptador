@@ -81,15 +81,6 @@ copyButton.addEventListener("click", (event) =>{
   document.execCommand("copy");
 });
 
-// Input-clear
-
-const inputClear = document.getElementById("clear-input");
-inputClear.addEventListener("click", (event) =>{
-  event.preventDefault();
-  const inputClear = document.getElementById("textToProcess");
-  inputClear.innerHTML = '';
-});
-
 // Clear
 
 const clear = document.getElementById("clear");
