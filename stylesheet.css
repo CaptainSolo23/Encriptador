@@ -173,6 +173,10 @@ main{
     padding-bottom: 1em;
 }
 
+.txt-Area{
+  border-radius: 0.5em;
+}
+
 .button-container{
     margin: 0 auto;
     padding: 0 auto;
