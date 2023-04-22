@@ -3,20 +3,47 @@
   * 
   * cypher keys
   * 
-La letra "e" es convertida para "enter"
-La letra "i" es convertida para "imes"
-La letra "a" es convertida para "ai"
-La letra "o" es convertida para "ober"
-La letra "u" es convertida para "ufat"
+"e" for "enter"
+"i" for "imes"
+"a" for "ai"
+"o" for "ober"
+"u" for "ufat"
 
   */
 
-let word = 'fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!'
 
-function encryptMessage (s){
+// Encryption
+const encryption = document.getElementById("encryptionButton");
+
+
+encryption.addEventListener("click",(event) => {
+  event.preventDefault();
+
+  const s = document.getElementById("textToProcess").value;
+
+  encryptMessage(s)
+  
+});
+
+// Decryption
+
+const decryption = document.getElementById("decryptionButton");
+
+
+decryption.addEventListener("click",(event) => {
+  event.preventDefault();
+
+  const s = document.getElementById("textToProcess").value;
+
+  decryptMessage(s)
+  
+});
+
+// Methods to be used
+
+// Encrypt
+function encryptMessage(s){
     
-  // var phrase = document.getElementById("textToEncrypt").value.toLowerCase();
-
   var sustitution = s.toLowerCase()
                     .replace(/e/img, "enter")
                     .replace(/o/img, "ober")
@@ -24,16 +51,14 @@ function encryptMessage (s){
                     .replace(/a/img, "ai")
                     .replace(/u/img, "ufat");
 
+  document.getElementById("resultText").innerHTML = sustitution;
   return sustitution
-
 }
 
-console.log(encryptMessage(word))
+// Decrypt
 
 function decryptMessage (s){
     
-  // var phrase = document.getElementById("textToEncrypt").value.toLowerCase();
-
   var sustitution = s.toLowerCase()
                     .replace(/enter/img, "e")
                     .replace(/ober/img, "o")
@@ -41,8 +66,35 @@ function decryptMessage (s){
                     .replace(/ai/img, "a")
                     .replace(/ufat/img, "u");
 
+  document.getElementById("resultText").innerHTML = sustitution;
   return sustitution
-
 }
 
-console.log(decryptMessage(word))
+
+//Copy to clipboard
+
+const copyButton = document.getElementById("copy");
+copyButton.addEventListener("click", (event) =>{
+  event.preventDefault();
+  const resultText = document.getElementById("resultText");
+  resultText.select();
+  document.execCommand("copy");
+});
+
+// Input-clear
+
+const inputClear = document.getElementById("clear-input");
+inputClear.addEventListener("click", (event) =>{
+  event.preventDefault();
+  const inputClear = document.getElementById("textToProcess");
+  inputClear.innerHTML = '';
+});
+
+// Clear
+
+const clear = document.getElementById("clear");
+clear.addEventListener("click", (event) =>{
+  event.preventDefault();
+  const clear = document.getElementById("resultText");
+  clear.innerHTML = '';
+});
